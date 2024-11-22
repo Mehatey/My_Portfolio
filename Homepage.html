@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Love you Toilet Paper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #FF6F61;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #FF6F61;
+            margin-top: 30px;
+        }
+
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .contact-info {
+            width: 30%;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .profile-image {
+            text-align: center;
+            width: 40%;
+        }
+
+        .profile-image img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .description {
+            width: 30%;
+        }
+
+        .assignments {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .assignments a {
+            display: block;
+            margin: 5px 0;
+            color: blue;
+            text-decoration: none;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            transform-style: preserve-3d;
+            animation: spin 4s infinite linear;
+            pointer-events: none;
+        }
+
+        .cursor div {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(64, 64, 64, 0.8);
+            border: 1px solid #404040;
+            animation: colorChange 6s infinite;
+        }
+
+        .cursor .front {
+            transform: rotateY(0deg) translateZ(15px);
+        }
+
+        .cursor .back {
+            transform: rotateY(180deg) translateZ(15px);
+        }
+
+        .cursor .left {
+            transform: rotateY(-90deg) translateZ(15px);
+        }
+
+        .cursor .right {
+            transform: rotateY(90deg) translateZ(15px);
+        }
+
+        .cursor .top {
+            transform: rotateX(90deg) translateZ(15px);
+        }
+
+        .cursor .bottom {
+            transform: rotateX(-90deg) translateZ(15px);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: rgba(64, 64, 64, 0.8);
+            }
+
+            /* Dark gray */
+            25% {
+                background-color: rgba(0, 0, 255, 0.8);
+            }
+
+            /* Blue */
+            50% {
+                background-color: rgba(0, 255, 0, 0.8);
+            }
+
+            /* Green */
+            75% {
+                background-color: rgba(128, 0, 128, 0.8);
+            }
+
+            /* Purple */
+            100% {
+                background-color: rgba(64, 64, 64, 0.8);
+            }
+
+            /* Back to dark gray */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HEY, I AM SID &copy;</h1>
+    <div class="top-section">
+        <div class="contact-info">
+            <p>Instagram: <a href="https://instagram.com/cubeofcreation">@cubeofcreation</a></p>
+            <p>Email: <a href="mailto:cubeofcreations@gmail.com">cubeofcreations@gmail.com</a></p>
+            <p>Resume: <a href="Images/Resume.png">View My Resume</a></p>
+        </div>
+        <div class="profile-image">
+            <img src="Images/Sid.gif" alt="Sid's Image">
+        </div>
+        <div class="description">
+            <p>
+                I am a creative individual who understands people very well. I have a good foundation in design, color,
+                typography, and composition. My passion for writing makes my designs impactful for the end user.
+            </p>
+        </div>
+    </div>
+
+    <h2>Assignments Done in CC Lab 2024</h2>
+    <div class="assignments">
+        <a href="Lost and Found.html">1. Lost & Found</a>
+        <a href="Face Generator.html">2. Face Generator</a>
+        <a href="Experimental Clock.html">3. Experimental Clock</a>
+        <a href="Exquisite Corpse.html">4. Exquisite Corpse</a>
+        <a href="Optical Illusion.html">5. Optical Illusion</a>
+        <a href="Game.html">6. Autobiographical Game</a>
+    </div>
+
+    <div class="cursor" id="cursor">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+    </script>
+</body>
+
+</html>
